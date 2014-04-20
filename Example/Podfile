@@ -1,0 +1,4 @@
+target "DSExample Tests", :exclusive => true do
+  pod 'Kiwi/XCTest'
+end
+
