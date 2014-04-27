@@ -1,5 +1,5 @@
 //
-// NodeFactorySpec.m
+// QueueSpec.m
 // DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
@@ -22,32 +22,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Kiwi.h>
-#import "NodeFactory.h"
-#import "BinaryNode.h"
-#import "DoubleLinkedListNode.h"
-#import "LinkedListNode.h"
+#import "Kiwi.h"
+#import "Queue.h"
 
-SPEC_BEGIN(NodeFactorySpec)
+SPEC_BEGIN(QueueSpec)
 
-describe(@"binaryNodeSpec", ^{
-    it(@"returns an instance of BinaryNode", ^{
-        id node = [NodeFactory binaryNode];
-        [[[node class] should] equal:[BinaryNode class]];
+describe(@"enqueue:object", ^{
+    __block Queue *queue;
+    
+    beforeAll(^{
+        queue = [[Queue alloc] init];
+        for (int i = 0; i < 10; i++) {
+            [queue enqueue:[NSNumber numberWithInt:i]];
+        }
     });
-});
-
-describe(@"doubleLinkedListNodeSpec", ^{
-    it(@"returns an instance of DoubleLinkedListNode", ^{
-        id node = [NodeFactory doubleLinkedListNode];
-        [[[node class] should] equal:[DoubleLinkedListNode class]];
-    });
-});
-
-describe(@"linkedListNodeSpec", ^{
-    it(@"returns an instance of LinkedListNode", ^{
-        id node = [NodeFactory linkedListNode];
-        [[[node class] should] equal:[LinkedListNode class]];
+    
+    context(@"deque", ^{
+        it(@"dequeues out pushed nodes", ^{
+            id obj = [queue dequeue];
+            [[obj should] equal:[NSNumber numberWithInt:0]];
+            obj = [queue dequeue];
+            [[obj should] equal:[NSNumber numberWithInt:1]];
+            obj = [queue dequeue];
+            [[obj should] equal:[NSNumber numberWithInt:2]];
+        });
     });
 });
 

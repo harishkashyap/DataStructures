@@ -1,5 +1,5 @@
 //
-// NodeFactorySpec.m
+// DataStructureFactory.m
 // DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
@@ -22,33 +22,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Kiwi.h>
-#import "NodeFactory.h"
-#import "BinaryNode.h"
-#import "DoubleLinkedListNode.h"
-#import "LinkedListNode.h"
+#import "DataStructureFactory.h"
 
-SPEC_BEGIN(NodeFactorySpec)
+@implementation DataStructureFactory
 
-describe(@"binaryNodeSpec", ^{
-    it(@"returns an instance of BinaryNode", ^{
-        id node = [NodeFactory binaryNode];
-        [[[node class] should] equal:[BinaryNode class]];
-    });
-});
++ (DoubleLinkedList *)doubleLinkedList {
+    return [[DoubleLinkedList alloc] init];
+}
 
-describe(@"doubleLinkedListNodeSpec", ^{
-    it(@"returns an instance of DoubleLinkedListNode", ^{
-        id node = [NodeFactory doubleLinkedListNode];
-        [[[node class] should] equal:[DoubleLinkedListNode class]];
-    });
-});
++ (LinkedList *)linkedList {
+    return [[LinkedList alloc] init];
+}
 
-describe(@"linkedListNodeSpec", ^{
-    it(@"returns an instance of LinkedListNode", ^{
-        id node = [NodeFactory linkedListNode];
-        [[[node class] should] equal:[LinkedListNode class]];
-    });
-});
++ (Queue *)queue {
+    return [[Queue alloc] init];
+}
 
-SPEC_END
++ (Stack *)stack {
+    return [[Stack alloc] init];
+}
+
+@end

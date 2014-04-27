@@ -1,5 +1,5 @@
 //
-// NodeFactorySpec.m
+// StackSpec.m
 // DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
@@ -22,32 +22,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Kiwi.h>
-#import "NodeFactory.h"
-#import "BinaryNode.h"
-#import "DoubleLinkedListNode.h"
-#import "LinkedListNode.h"
+#import "Kiwi.h"
+#import "Stack.h"
 
-SPEC_BEGIN(NodeFactorySpec)
+SPEC_BEGIN(StackSpec)
 
-describe(@"binaryNodeSpec", ^{
-    it(@"returns an instance of BinaryNode", ^{
-        id node = [NodeFactory binaryNode];
-        [[[node class] should] equal:[BinaryNode class]];
+describe(@"pop", ^{
+    __block Stack *stack;
+    
+    beforeAll(^{
+        stack = [[Stack alloc] init];
+        for (int i = 0; i < 10; i++) {
+            [stack push:[NSNumber numberWithInt:i]];
+        }
     });
-});
-
-describe(@"doubleLinkedListNodeSpec", ^{
-    it(@"returns an instance of DoubleLinkedListNode", ^{
-        id node = [NodeFactory doubleLinkedListNode];
-        [[[node class] should] equal:[DoubleLinkedListNode class]];
-    });
-});
-
-describe(@"linkedListNodeSpec", ^{
-    it(@"returns an instance of LinkedListNode", ^{
-        id node = [NodeFactory linkedListNode];
-        [[[node class] should] equal:[LinkedListNode class]];
+    
+    context(@"pop", ^{
+        it(@"pops out pushed nodes", ^{
+            id obj = [stack pop];
+            [[obj should] equal:[NSNumber numberWithInt:9]];
+            obj = [stack pop];
+            [[obj should] equal:[NSNumber numberWithInt:8]];
+        });
     });
 });
 

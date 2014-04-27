@@ -32,5 +32,7 @@
 #import "NodeFactory.h"
 #import "DoubleLinkedList.h"
 #import "LinkedList.h"
+#import "Queue.h"
+#import "Stack.h"
 
 #endif /* _DATASTRUCTURES_ */

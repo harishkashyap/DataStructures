@@ -1,5 +1,5 @@
 //
-// NodeFactorySpec.m
+// Queue.m
 // DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
@@ -22,33 +22,51 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Kiwi.h>
-#import "NodeFactory.h"
-#import "BinaryNode.h"
+#import "Queue.h"
 #import "DoubleLinkedListNode.h"
-#import "LinkedListNode.h"
 
-SPEC_BEGIN(NodeFactorySpec)
+@interface Queue()
 
-describe(@"binaryNodeSpec", ^{
-    it(@"returns an instance of BinaryNode", ^{
-        id node = [NodeFactory binaryNode];
-        [[[node class] should] equal:[BinaryNode class]];
-    });
-});
+@property (nonatomic, strong) DoubleLinkedListNode *tail;
 
-describe(@"doubleLinkedListNodeSpec", ^{
-    it(@"returns an instance of DoubleLinkedListNode", ^{
-        id node = [NodeFactory doubleLinkedListNode];
-        [[[node class] should] equal:[DoubleLinkedListNode class]];
-    });
-});
+@end
 
-describe(@"linkedListNodeSpec", ^{
-    it(@"returns an instance of LinkedListNode", ^{
-        id node = [NodeFactory linkedListNode];
-        [[[node class] should] equal:[LinkedListNode class]];
-    });
-});
+@implementation Queue
 
-SPEC_END
+- (id)init {
+    if (self = [super init]) {
+        _tail = [[DoubleLinkedListNode alloc] init];
+        _tail.next = nil;
+        _tail.prev = nil;
+    }
+    return self;
+}
+
+- (void)enqueue:(id)object {
+    if (object) {
+        DoubleLinkedListNode *newNode = [[DoubleLinkedListNode alloc] init];
+        DoubleLinkedListNode *currentNode = (DoubleLinkedListNode *)self.head.next;
+        
+        newNode.object = object;
+
+        if (self.head.next == nil) {
+            self.tail.next = newNode;
+        }
+        newNode.prev = (DoubleLinkedListNode *)self.head;
+        self.head.next = newNode;
+        currentNode.prev = newNode;
+    }
+}
+
+- (id)dequeue {
+    DoubleLinkedListNode *node = (DoubleLinkedListNode *)self.tail.next;
+    DoubleLinkedListNode *prevNode = node.prev;
+    id object = [node.object copy];
+    node.object = nil;
+    node.next = nil;
+    prevNode.next = nil;
+    self.tail.next = prevNode;
+    return object;
+}
+
+@end

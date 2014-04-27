@@ -35,6 +35,14 @@
 		88A6B5D81904151000DCB3F2 /* LinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6B5CC1904151000DCB3F2 /* LinkedListNode.m */; };
 		88A6B5D91904151000DCB3F2 /* NodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6B5CE1904151000DCB3F2 /* NodeFactory.m */; };
 		88A6B5DA1904151000DCB3F2 /* NodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6B5CE1904151000DCB3F2 /* NodeFactory.m */; };
+		88DE18C719086E86008E830F /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18C619086E86008E830F /* Stack.m */; };
+		88DE18C819086E86008E830F /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18C619086E86008E830F /* Stack.m */; };
+		88DE18CA1908729B008E830F /* StackSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18C91908729B008E830F /* StackSpec.m */; };
+		88DE18CD190BEDEA008E830F /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18CC190BEDEA008E830F /* Queue.m */; };
+		88DE18CE190BEDEA008E830F /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18CC190BEDEA008E830F /* Queue.m */; };
+		88DE18D0190D236F008E830F /* QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18CF190D236F008E830F /* QueueSpec.m */; };
+		88DE18D3190D2FFE008E830F /* DataStructureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18D2190D2FFE008E830F /* DataStructureFactory.m */; };
+		88DE18D4190D2FFE008E830F /* DataStructureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DE18D2190D2FFE008E830F /* DataStructureFactory.m */; };
 		EE6DD684B2CB4E6E8A3D3159 /* libPods-DSExample Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34EE628E89484AF9AED4523F /* libPods-DSExample Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +95,14 @@
 		88A6B5CC1904151000DCB3F2 /* LinkedListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListNode.m; sourceTree = "<group>"; };
 		88A6B5CD1904151000DCB3F2 /* NodeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeFactory.h; sourceTree = "<group>"; };
 		88A6B5CE1904151000DCB3F2 /* NodeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeFactory.m; sourceTree = "<group>"; };
+		88DE18C519086E86008E830F /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		88DE18C619086E86008E830F /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		88DE18C91908729B008E830F /* StackSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackSpec.m; sourceTree = "<group>"; };
+		88DE18CB190BEDEA008E830F /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		88DE18CC190BEDEA008E830F /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		88DE18CF190D236F008E830F /* QueueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueSpec.m; sourceTree = "<group>"; };
+		88DE18D1190D2FFE008E830F /* DataStructureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStructureFactory.h; sourceTree = "<group>"; };
+		88DE18D2190D2FFE008E830F /* DataStructureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStructureFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				88A6B5AA1901DC1000DCB3F2 /* DSExample_Tests.m */,
-				88A6B5B21901DD3800DCB3F2 /* NodeFactorySpec.m */,
 				88A6B5B4190203CC00DCB3F2 /* LinkedListSpec.m */,
+				88A6B5B21901DD3800DCB3F2 /* NodeFactorySpec.m */,
+				88DE18CF190D236F008E830F /* QueueSpec.m */,
+				88DE18C91908729B008E830F /* StackSpec.m */,
 				88A6B5A51901DC1000DCB3F2 /* Supporting Files */,
 			);
 			path = "DSExample Tests";
@@ -200,6 +218,8 @@
 				88A6B5C21904151000DCB3F2 /* BinaryNode.h */,
 				88A6B5C31904151000DCB3F2 /* BinaryNode.m */,
 				88A6B5C41904151000DCB3F2 /* DataStructures.h */,
+				88DE18D1190D2FFE008E830F /* DataStructureFactory.h */,
+				88DE18D2190D2FFE008E830F /* DataStructureFactory.m */,
 				88A6B5C51904151000DCB3F2 /* DoubleLinkedList.h */,
 				88A6B5C61904151000DCB3F2 /* DoubleLinkedList.m */,
 				88A6B5C71904151000DCB3F2 /* DoubleLinkedListNode.h */,
@@ -210,6 +230,10 @@
 				88A6B5CC1904151000DCB3F2 /* LinkedListNode.m */,
 				88A6B5CD1904151000DCB3F2 /* NodeFactory.h */,
 				88A6B5CE1904151000DCB3F2 /* NodeFactory.m */,
+				88DE18CB190BEDEA008E830F /* Queue.h */,
+				88DE18CC190BEDEA008E830F /* Queue.m */,
+				88DE18C519086E86008E830F /* Stack.h */,
+				88DE18C619086E86008E830F /* Stack.m */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -351,9 +375,12 @@
 				88A6B5D51904151000DCB3F2 /* LinkedList.m in Sources */,
 				88A6B5D31904151000DCB3F2 /* DoubleLinkedListNode.m in Sources */,
 				88A6B55E1901B12200DCB3F2 /* AppDelegate.m in Sources */,
+				88DE18CD190BEDEA008E830F /* Queue.m in Sources */,
 				88A6B5D71904151000DCB3F2 /* LinkedListNode.m in Sources */,
 				88A6B5CF1904151000DCB3F2 /* BinaryNode.m in Sources */,
+				88DE18D3190D2FFE008E830F /* DataStructureFactory.m in Sources */,
 				88A6B5D11904151000DCB3F2 /* DoubleLinkedList.m in Sources */,
+				88DE18C719086E86008E830F /* Stack.m in Sources */,
 				88A6B55A1901B12200DCB3F2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,11 +392,16 @@
 				88A6B5DA1904151000DCB3F2 /* NodeFactory.m in Sources */,
 				88A6B5AB1901DC1000DCB3F2 /* DSExample_Tests.m in Sources */,
 				88A6B5D61904151000DCB3F2 /* LinkedList.m in Sources */,
+				88DE18CE190BEDEA008E830F /* Queue.m in Sources */,
 				88A6B5D41904151000DCB3F2 /* DoubleLinkedListNode.m in Sources */,
 				88A6B5B31901DD3800DCB3F2 /* NodeFactorySpec.m in Sources */,
 				88A6B5D81904151000DCB3F2 /* LinkedListNode.m in Sources */,
 				88A6B5D01904151000DCB3F2 /* BinaryNode.m in Sources */,
+				88DE18D4190D2FFE008E830F /* DataStructureFactory.m in Sources */,
 				88A6B5D21904151000DCB3F2 /* DoubleLinkedList.m in Sources */,
+				88DE18CA1908729B008E830F /* StackSpec.m in Sources */,
+				88DE18D0190D236F008E830F /* QueueSpec.m in Sources */,
+				88DE18C819086E86008E830F /* Stack.m in Sources */,
 				88A6B5B5190203CC00DCB3F2 /* LinkedListSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-// NodeFactorySpec.m
+// Stack.m
 // DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
@@ -22,33 +22,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Kiwi.h>
-#import "NodeFactory.h"
-#import "BinaryNode.h"
-#import "DoubleLinkedListNode.h"
+#import "Stack.h"
 #import "LinkedListNode.h"
 
-SPEC_BEGIN(NodeFactorySpec)
+@implementation Stack
 
-describe(@"binaryNodeSpec", ^{
-    it(@"returns an instance of BinaryNode", ^{
-        id node = [NodeFactory binaryNode];
-        [[[node class] should] equal:[BinaryNode class]];
-    });
-});
+- (id)peek {
+    return self.head.object;
+}
 
-describe(@"doubleLinkedListNodeSpec", ^{
-    it(@"returns an instance of DoubleLinkedListNode", ^{
-        id node = [NodeFactory doubleLinkedListNode];
-        [[[node class] should] equal:[DoubleLinkedListNode class]];
-    });
-});
+- (id)pop {
+    LinkedListNode *node = self.head.next;
+    id object = [node.object copy];
+    [self deleteNode:1];
+    return object;
+}
 
-describe(@"linkedListNodeSpec", ^{
-    it(@"returns an instance of LinkedListNode", ^{
-        id node = [NodeFactory linkedListNode];
-        [[[node class] should] equal:[LinkedListNode class]];
-    });
-});
+- (void)push:(id)object {
+    [self insertNode:object];
+}
 
-SPEC_END
+@end

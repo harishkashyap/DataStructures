@@ -1,5 +1,6 @@
 //
-// NodeFactory.h
+// Stack.h
+// DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
 //
@@ -20,46 +21,42 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
 /*
- `NodeFactory is a class that generates Nodes for Binary Tree, Double Linked List, Linked List
+ `Stack is a class that implements basic Stack operations
  ## NSCoding & NSCopying Conformance
  
- Some of the methods in `NodeFactory` may conform to the `NSCoding` and `NSCopying` protocols.
+ Some of the methods in `Stack` conforms to the `NSCoding` and `NSCopying` protocols.
  */
 
-@interface NodeFactory : NSObject
+#import "LinkedList.h"
 
-///-----------------------------
-/// @name Generating Binary Node
-///-----------------------------
+@interface Stack : LinkedList
+
+///-------------------------------------
+/// @name Peek into the top of the stack
+///-------------------------------------
 
 /**
- `binaryNode` generates a leaf of Binary Tree with left and right nodes that contains an object.
-  use the object to add any content you want such as arrays or numbers or strings
- @return The newly generated instance of BinaryNode.
+ @return object at the top of the stack.
  */
-+ (id)binaryNode;
+- (id)peek;
 
-///-----------------------------------------
-/// @name Generating Double Linked List Node
-///-----------------------------------------
+///--------------------------------------
+/// @name Pop the top object of the stack
+///--------------------------------------
 
 /**
- `doubleLinkedListNode` generates a doubly linked list node containing an object.
- This is a subclass of LinkedListNode with pointer to previous node.
- @return The instance of DoubleLinkedListNode.
+ @return object at the top of the stack.
  */
-+ (id)doubleLinkedListNode;
+- (id)pop;
 
-///----------------------------------
-/// @name Generating Linked List Node
-///----------------------------------
+///---------------------
+/// @name Push an object
+///---------------------
 
 /**
- `linkedListNode` generates a linked list node containing an object.
- @return The instance of a LinkedListNode.
+ @param object that needs to be pushed into the stack.
  */
-+ (id)linkedListNode;
+- (void)push:(id)object;
 
 @end

@@ -1,5 +1,6 @@
 //
-// NodeFactory.h
+// Queue.h
+// DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
 //
@@ -22,44 +23,41 @@
 // THE SOFTWARE.
 
 /*
- `NodeFactory is a class that generates Nodes for Binary Tree, Double Linked List, Linked List
+ `Queue is a class that implements basic Queue operations
  ## NSCoding & NSCopying Conformance
  
- Some of the methods in `NodeFactory` may conform to the `NSCoding` and `NSCopying` protocols.
+ Some of the methods in `Queue` conforms to the `NSCoding` and `NSCopying` protocols.
  */
 
-@interface NodeFactory : NSObject
+#import "DoubleLinkedList.h"
 
-///-----------------------------
-/// @name Generating Binary Node
-///-----------------------------
+@interface Queue : DoubleLinkedList
+
+///---------------------------
+/// @name Initialize the Queue
+///---------------------------
 
 /**
- `binaryNode` generates a leaf of Binary Tree with left and right nodes that contains an object.
-  use the object to add any content you want such as arrays or numbers or strings
- @return The newly generated instance of BinaryNode.
+ @return queue.
  */
-+ (id)binaryNode;
+- (id)init;
 
-///-----------------------------------------
-/// @name Generating Double Linked List Node
-///-----------------------------------------
+///---------------------------------------
+/// @name Enqueue an object into the Queue
+///---------------------------------------
 
 /**
- `doubleLinkedListNode` generates a doubly linked list node containing an object.
- This is a subclass of LinkedListNode with pointer to previous node.
- @return The instance of DoubleLinkedListNode.
+ @param object to be enqueued.
  */
-+ (id)doubleLinkedListNode;
+- (void)enqueue:(id)object;
 
-///----------------------------------
-/// @name Generating Linked List Node
-///----------------------------------
+///------------------------
+/// @name Dequeue the queue
+///------------------------
 
 /**
- `linkedListNode` generates a linked list node containing an object.
- @return The instance of a LinkedListNode.
+ @return object at the end of the Queue.
  */
-+ (id)linkedListNode;
+- (id)dequeue;
 
 @end

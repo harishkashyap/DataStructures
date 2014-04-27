@@ -1,8 +1,8 @@
 //
-//  LinkedListSpec.m
-//  DSExample
+// LinkedListSpec.m
+// DSExample
 //
-// Copyright (c) 2013 Harish Kashyap
+// Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
 #import <Kiwi.h>
 #import "LinkedList.h"
 
@@ -55,11 +54,11 @@ describe(@"deleteNode", ^{
     
     context(@"deleteNode", ^{
         it(@"deletes nth node", ^{
-            [linkedList deleteNode:5];
+            [linkedList deleteNode:1];
             NSArray *objects = [linkedList allObjects];
-            [[[objects objectAtIndex:4] should] equal:[NSNumber numberWithInt:5]];
-            [[[objects objectAtIndex:5] should] equal:[NSNumber numberWithInt:3]];
-            [[[objects objectAtIndex:6] should] equal:[NSNumber numberWithInt:2]];
+            [[[objects objectAtIndex:0] should] equal:[NSNumber numberWithInt:8]];
+            [[[objects objectAtIndex:1] should] equal:[NSNumber numberWithInt:7]];
+            [[[objects objectAtIndex:2] should] equal:[NSNumber numberWithInt:6]];
         });
     });
 });

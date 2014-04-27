@@ -1,6 +1,7 @@
 //
-//  LinkedList.m
-// Copyright (c) 2013 Harish Kashyap
+// LinkedList.m
+//
+// Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -48,7 +49,7 @@
 
 - (void)deleteNode:(int)n {
     LinkedListNode *node = self.head;
-    int i = 0;
+    int i = 1;
     while ((node.next != nil)&&(i++ < n)){
         node = node.next;
     }
@@ -56,6 +57,7 @@
     node.next = nextNode.next;
     nextNode.object = nil;
     nextNode.next = nil;
+    nextNode = nil;
 }
 
 - (void)insertNode:(id)object {

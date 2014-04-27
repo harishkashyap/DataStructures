@@ -24,12 +24,17 @@ it simply add the following line to your Podfile:
 
 ```ruby
 platform :ios, '7.0'
-pod "DataStructures", "~> 0.1.0"
+pod "DataStructures", "~> 0.1.1"
 ```
+## 0.1.1
+
+DataStructures 0.1.1 is the latest release
+* Adds Stack, Queue.
+* Adds a DataStructure Factory class
 
 ## 0.1.0
 
-DataStructures 0.1.0 is the latest release
+DataStructures 0.1.0 is the first release
 
 ## Author
 

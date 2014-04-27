@@ -1,5 +1,6 @@
 //
-// NodeFactory.h
+// DataStructureFactory.h
+// DSExample
 //
 // Copyright (c) 2013 Harish Kashyap (http://www.thevoyagenius.com)
 //
@@ -22,44 +23,59 @@
 // THE SOFTWARE.
 
 /*
- `NodeFactory is a class that generates Nodes for Binary Tree, Double Linked List, Linked List
+ `DataStructureFactory` is a class that generates DataStructures for:
+ - Doubly Linked List
+ - Linked List
+ - Queue
+ - Stack
+ 
  ## NSCoding & NSCopying Conformance
  
  Some of the methods in `NodeFactory` may conform to the `NSCoding` and `NSCopying` protocols.
  */
 
-@interface NodeFactory : NSObject
+#import "DataStructures.h"
+
+@interface DataStructureFactory : NSObject
+
+///------------------------------------
+/// @name Generating Doubly Linked List
+///------------------------------------
+
+/**
+ `doubleLinkedList` generates a Doubly Linked List with a head and tail pointer
+ @return The newly generated instance of DoubleLinkedList.
+ */
++ (DoubleLinkedList *)doubleLinkedList;
 
 ///-----------------------------
-/// @name Generating Binary Node
+/// @name Generating Linked List
 ///-----------------------------
 
 /**
- `binaryNode` generates a leaf of Binary Tree with left and right nodes that contains an object.
-  use the object to add any content you want such as arrays or numbers or strings
- @return The newly generated instance of BinaryNode.
+ `linkedList` generates a  Linked List with pointer with a head pointer
+ @return The newly generated instance of LinkedList.
  */
-+ (id)binaryNode;
++ (LinkedList *)linkedList;
 
-///-----------------------------------------
-/// @name Generating Double Linked List Node
-///-----------------------------------------
+///-----------------------
+/// @name Generating Queue
+///-----------------------
 
 /**
- `doubleLinkedListNode` generates a doubly linked list node containing an object.
- This is a subclass of LinkedListNode with pointer to previous node.
- @return The instance of DoubleLinkedListNode.
+ `queue` generates a Queue.
+ @return The newly generated instance of Queue.
  */
-+ (id)doubleLinkedListNode;
++ (Queue *)queue;
 
-///----------------------------------
-/// @name Generating Linked List Node
-///----------------------------------
+///-----------------------
+/// @name Generating Stack
+///-----------------------
 
 /**
- `linkedListNode` generates a linked list node containing an object.
- @return The instance of a LinkedListNode.
+ `stack` generates a stack.
+ @return The newly generated instance of Stack.
  */
-+ (id)linkedListNode;
++ (Stack *)stack;
 
 @end
