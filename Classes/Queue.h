@@ -60,4 +60,13 @@
  */
 - (id)dequeue;
 
+///--------------------------------
+/// @name Get contents of the Queue
+///--------------------------------
+
+/**
+ @return object at the end of the Queue.
+ */
+- (NSString *)description;
+
 @end

@@ -48,25 +48,42 @@
         DoubleLinkedListNode *currentNode = (DoubleLinkedListNode *)self.head.next;
         
         newNode.object = object;
-
+        
         if (self.head.next == nil) {
             self.tail.next = newNode;
         }
         newNode.prev = (DoubleLinkedListNode *)self.head;
+        newNode.next = currentNode;
         self.head.next = newNode;
         currentNode.prev = newNode;
     }
 }
 
 - (id)dequeue {
-    DoubleLinkedListNode *node = (DoubleLinkedListNode *)self.tail.next;
-    DoubleLinkedListNode *prevNode = node.prev;
-    id object = [node.object copy];
-    node.object = nil;
-    node.next = nil;
-    prevNode.next = nil;
-    self.tail.next = prevNode;
-    return object;
+    if (self.head.next) {
+        DoubleLinkedListNode *node = (DoubleLinkedListNode *)self.tail.next;
+        DoubleLinkedListNode *prevNode = node.prev;
+        id object = [node.object copy];
+        node.object = nil;
+        node.next = nil;
+        prevNode.next = nil;
+        self.tail.next = prevNode;
+        return object;
+    }
+    return nil;
+}
+
+- (NSString *)description {
+    NSMutableString *queueContent = [[NSMutableString alloc] initWithString:@"Contents of Queue\n"];
+    for (id object in [self allObjects]) {
+        if ([object respondsToSelector:@selector(description)]) {
+            [queueContent appendString:[object description]];
+            [queueContent appendString:@"\n"];
+        }else {
+            [queueContent appendString:@"Implement description method in the objects"];
+        }
+    }
+    return queueContent;
 }
 
 @end
