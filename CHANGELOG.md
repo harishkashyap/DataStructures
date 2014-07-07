@@ -1,4 +1,6 @@
 # DataStructures CHANGELOG
+## 0.1.2
+Fixes Queue operations
 
 ## 0.1.1
 Latest Release

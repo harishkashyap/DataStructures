@@ -24,8 +24,11 @@ it simply add the following line to your Podfile:
 
 ```ruby
 platform :ios, '7.0'
-pod "DataStructures", "~> 0.1.1"
+pod "DataStructures", "~> 0.1.2"
 ```
+## 0.1.2
+enqueue and deque bug fixes
+
 ## 0.1.1
 
 DataStructures 0.1.1 is the latest release
