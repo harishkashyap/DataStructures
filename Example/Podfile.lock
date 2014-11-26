@@ -1,0 +1,20 @@
+PODS:
+  - DataStructures (0.1.0)
+  - FBSnapshotTestCase (1.4)
+  - Kiwi (2.3.1)
+
+DEPENDENCIES:
+  - DataStructures (from `../`)
+  - FBSnapshotTestCase
+  - Kiwi
+
+EXTERNAL SOURCES:
+  DataStructures:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DataStructures: 1bc49de1a8e742e77c3ad1ab85d06bdf90e044cd
+  FBSnapshotTestCase: f9f225b5ba11c8d8c09075590490df16314e4d62
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+
+COCOAPODS: 0.35.0

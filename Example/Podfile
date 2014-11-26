@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'DataStructures', :exclusive => true do
+  pod "DataStructures", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "DataStructures", :path => "../"
+
+  pod 'Kiwi'
+  pod 'FBSnapshotTestCase'
+end

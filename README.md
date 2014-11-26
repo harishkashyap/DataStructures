@@ -1,55 +1,26 @@
 # DataStructures
 
-DataStructures library contains the following basic data structures:
-
-* Linked Lists
-* Binary Trees
-* Stacks
-* Queue
+[![CI Status](http://img.shields.io/travis/Harish Krishnamurthy/DataStructures.svg?style=flat)](https://travis-ci.org/Harish Krishnamurthy/DataStructures)
+[![Version](https://img.shields.io/cocoapods/v/DataStructures.svg?style=flat)](http://cocoadocs.org/docsets/DataStructures)
+[![License](https://img.shields.io/cocoapods/l/DataStructures.svg?style=flat)](http://cocoadocs.org/docsets/DataStructures)
+[![Platform](https://img.shields.io/cocoapods/p/DataStructures.svg?style=flat)](http://cocoadocs.org/docsets/DataStructures)
 
 ## Usage
 
-To run the example project; clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
 ## Installation
 
-DataStructures is available through [CocoaPods](http://cocoapods.org), to install
-it simply add the following line to your Podfile:
+DataStructures is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
     pod "DataStructures"
 
-#### Podfile
-
-```ruby
-platform :ios, '7.0'
-pod "DataStructures", "~> 0.1.2"
-```
-## 0.1.2
-enqueue and deque bug fixes
-
-## 0.1.1
-
-DataStructures 0.1.1 is the latest release
-* Adds Stack, Queue.
-* Adds a DataStructure Factory class
-
-## 0.1.0
-
-DataStructures 0.1.0 is the first release
-
 ## Author
 
-DataStructures was originally created by [Harish Kashyap](https://github.com/VoyaGenius/)
-
-## Contact
-
-Follow VoyaGenius on Twitter ([@voyagenius](https://twitter.com/voyagenius))
-
-### Maintainers
-
-- [Harish Kashyap](http://github.com/voyagenius) ([@hkashyap](http://twitter.com/hkashyap))
+Harish Krishnamurthy, hkashyap@icloud.com
 
 ## License
 
