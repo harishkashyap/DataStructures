@@ -1,7 +1,4 @@
 # DataStructures CHANGELOG
-## 0.1.3
-Fixes return object as not a copy
-
 ## 0.1.2
 Fixes Queue operations
 
