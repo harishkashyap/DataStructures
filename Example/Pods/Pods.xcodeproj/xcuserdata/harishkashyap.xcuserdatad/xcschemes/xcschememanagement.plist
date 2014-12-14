@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DataStructures.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-DataStructures-DataStructures.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>097699B614B6897D64414F9F</key>
+		<key>1A483960261ED2B2CC57596E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29B5A7E3A6CDF33E6870F405</key>
+		<key>37100AC4E515331EC76F1306</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45E2751C997846D047C459B4</key>
+		<key>3C17399E973845B5F099C923</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74B2F288162EE9EFB97DDCF0</key>
+		<key>AA874F98D290DCFC53C6B1A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CBBD0DEEA86631463DAE83D</key>
+		<key>BD33194E5A4BC1306C8268DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9178C3A80795FD62324438B5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EEFDD45330C176F871AA9EB0</key>
+		<key>DF125E1F569196D4651A71FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

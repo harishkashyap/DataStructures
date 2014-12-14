@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7CBBD0DEEA86631463DAE83D"
+               BlueprintIdentifier = "37100AC4E515331EC76F1306"
                BuildableName = "libPods-DataStructures-DataStructures.a"
                BlueprintName = "Pods-DataStructures-DataStructures"
                ReferencedContainer = "container:Pods.xcodeproj">

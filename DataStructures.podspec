@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DataStructures"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "Basic Implementation of DataStructures."
   s.description      = <<-DESC
                        Contains Implementation of following type of DataStructures:

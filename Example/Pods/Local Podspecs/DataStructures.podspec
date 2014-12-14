@@ -1,38 +1,31 @@
-#
-# Be sure to run `pod lib lint DataStructures.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "DataStructures"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of DataStructures."
+  s.version          = "0.1.3"
+  s.summary          = "Basic Implementation of DataStructures."
   s.description      = <<-DESC
-                       An optional longer description of DataStructures
+                       Contains Implementation of following type of DataStructures:
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       * Linked List
+                       * Double Linked List
+		       * Binary Tree
+		       * Factory class to generate various nodes.
+		       * Stack
+		       * Queue
+		       * Factory class to generate Data Structures
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DataStructures"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/harishkashyap/DataStructures"
   s.license          = 'MIT'
-  s.author           = { "Harish Krishnamurthy" => "hkashyap@icloud.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DataStructures.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Harish Kashyap" => "harish.k.kashyap@gmail.com" }
+  s.source           = { :git => "https://github.com/harishkashyap/DataStructures.git", :tag => "0.1.3" }
+  s.social_media_url = 'https://twitter.com/hkashyap'
 
-  s.platform     = :ios, '7.0'
+  # s.platform     = :ios, '7.0'
+  # s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'DataStructures' => ['Pod/Assets/*.png']
-  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.exclude_files = 'Classes/osx'
+  s.osx.exclude_files = 'Classes/ios'
+  # s.public_header_files = 'Classes/DataStructures.h'
 end

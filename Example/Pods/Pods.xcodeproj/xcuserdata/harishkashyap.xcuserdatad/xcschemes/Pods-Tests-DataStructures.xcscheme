@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "74B2F288162EE9EFB97DDCF0"
+               BlueprintIdentifier = "1A483960261ED2B2CC57596E"
                BuildableName = "libPods-Tests-DataStructures.a"
                BlueprintName = "Pods-Tests-DataStructures"
                ReferencedContainer = "container:Pods.xcodeproj">
