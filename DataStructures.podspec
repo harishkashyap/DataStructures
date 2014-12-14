@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DataStructures"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "Basic Implementation of DataStructures."
   s.description      = <<-DESC
                        Contains Implementation of following type of DataStructures:
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/harishkashyap/DataStructures"
   s.license          = 'MIT'
   s.author           = { "Harish Kashyap" => "harish.k.kashyap@gmail.com" }
-  s.source           = { :git => "https://github.com/harishkashyap/DataStructures.git", :tag => "0.1.3" }
+  s.source           = { :git => "https://github.com/harishkashyap/DataStructures.git", :tag => "0.1.5" }
   s.social_media_url = 'https://twitter.com/hkashyap'
 
   # s.platform     = :ios, '7.0'
